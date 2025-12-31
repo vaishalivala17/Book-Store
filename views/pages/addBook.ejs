@@ -1,0 +1,20 @@
+<%- include("../partials/header") %>
+
+<div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+        <div class="card shadow p-4">
+            <h4 class="mb-3 fw-bold">➕ Add New Book</h4>
+
+            <form method="POST" enctype="multipart/form-data">
+                <input name="title" class="form-control mb-3" placeholder="Book Title" required>
+                <input name="author" class="form-control mb-3" placeholder="Author Name" required>
+                <input name="price" type="number" class="form-control mb-3" placeholder="Price" required>
+                <input name="image" type="file" class="form-control mb-4" required>
+
+                <button class="btn btn-success w-100">Save Book</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include("../partials/footer") %>

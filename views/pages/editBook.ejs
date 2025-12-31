@@ -1,0 +1,18 @@
+<%- include("../partials/header") %>
+
+<h3 class="text-center">Edit Book</h3>
+
+<form method="POST" action="/editBook/<%= book._id %>" enctype="multipart/form-data" style="max-width: 500px; margin: 0 auto;">
+    <input name="title" value="<%= book.title %>" class="form-control mb-2">
+    <input name="author" value="<%= book.author %>" class="form-control mb-2">
+    <input name="price" value="<%= book.price %>" class="form-control mb-2">
+
+    <p>Current Image:</p>
+    <img src="/uploads/<%= book.image %>" height="150" class="mb-2">
+
+    <input name="image" type="file" class="form-control mb-3">
+
+    <button class="btn btn-success">Update</button>
+</form>
+
+<%- include("../partials/footer") %>

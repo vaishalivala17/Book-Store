@@ -1,0 +1,40 @@
+<%- include("partials/header") %>
+
+<h3 class="mb-4 fw-bold text-center">📖 Available Books</h3>
+
+<% if (books.length === 0) { %>
+    <h5 class="text-center mt-5">No books available. Please add some books.</h5>
+<% } else { %>
+
+<div class="row g-4">
+    <% books.forEach(book => { %>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="card shadow-sm h-100 border-0">
+                <img src="/uploads/<%= book.image %>" 
+                     class="card-img-top"
+                     style="height:280px; object-fit:cover;">
+
+                <div class="card-body">
+                    <h5 class="fw-semibold"><%= book.title %></h5>
+                    <p class="text-muted mb-1"><%= book.author %></p>
+                    <p class="fw-bold text-primary">₹ <%= book.price %></p>
+                </div>
+
+                <div class="card-footer bg-white border-0 text-center">
+                    <a href="/editBook/<%= book._id %>" class="btn btn-outline-success px-3 btn-sm me-2">
+                        Edit
+                    </a>
+                    <a href="/deleteBook/<%= book._id %>" 
+                       onclick="return confirm('Delete this book?')"
+                       class="btn btn-outline-danger btn-sm">
+                        Delete
+                    </a>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+</div>
+
+<% } %>
+
+<%- include("partials/footer") %>
