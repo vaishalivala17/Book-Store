@@ -30,23 +30,18 @@ This app allows users to **add, view, edit, and delete books** with image upload
 🗃 Database
 
 Database Name: bookApp
-
 Collection: books
-
 Managed using MongoDB Compass
 
 🧠 Learning Outcome
 
 Understanding MVC architecture
-
 CRUD operations with MongoDB
-
 File upload handling
-
 Routing and controllers in Express
+Connecting backend with EJS views
 
-Connecting backend with EJS views📝 Note
+📝 Note
 
 node_modules is excluded using .gitignore
-
 Run npm install after cloning the project
