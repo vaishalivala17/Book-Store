@@ -43,5 +43,6 @@ Connecting backend with EJS views
 
 📝 Note
 
-node_modules is excluded using .gitignore
+node_modules is excluded using .gitignore  
+
 Run npm install after cloning the project
